@@ -5,23 +5,23 @@
   --primary-dark: #008a43;
   --secondary-color: #ff6b35;
   --accent-color: #1e3a8a;
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
   --text-light: #9ca3af;
-  --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
-  --bg-tertiary: #f3f4f6;
-  --border-color: #e5e7eb;
-  --border-light: #f3f4f6;
+  --bg-primary: #1f2937;
+  --bg-secondary: #374151;
+  --bg-tertiary: #4b5563;
+  --border-color: #4b5563;
+  --border-light: #374151;
   --success-color: #10b981;
   --warning-color: #f59e0b;
   --error-color: #ef4444;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4),
+    0 4px 6px -4px rgb(0 0 0 / 0.4);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.4),
+    0 8px 10px -6px rgb(0 0 0 / 0.4);
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
@@ -38,7 +38,7 @@ body {
     "Oxygen", "Ubuntu", "Cantarell", sans-serif;
   line-height: 1.6;
   color: var(--text-primary);
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
   min-height: 100vh;
 }
 
@@ -148,14 +148,14 @@ body {
   font-size: 1rem;
   font-weight: 500;
   transition: all 0.2s ease;
-  background: var(--bg-primary);
-  color: white;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
 }
 
 .input-group input:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgb(0 166 81 / 0.1);
+  box-shadow: 0 0 0 3px rgb(0 166 81 / 0.3);
 }
 
 .calculate-btn {
@@ -229,6 +229,7 @@ body {
 
 .result-card.total-deduction {
   border-left: 4px solid var(--error-color);
+  background: rgba(239, 68, 68, 0.1);
 }
 
 .result-label {
@@ -370,23 +371,5 @@ body {
 
   .mode-btn {
     text-align: center;
-  }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-primary: #f9fafb;
-    --text-secondary: #d1d5db;
-    --text-light: #9ca3af;
-    --bg-primary: #1f2937;
-    --bg-secondary: #374151;
-    --bg-tertiary: #4b5563;
-    --border-color: #4b5563;
-    --border-light: #374151;
-  }
-
-  body {
-    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
   }
 }
