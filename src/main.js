@@ -172,15 +172,12 @@ class SalaryCalculatorApp {
     if (mode === "gross-to-net") {
       document.getElementById("gross-to-net-btn").classList.add("active");
       document.getElementById("salary-label").textContent =
-        "Brüt əməkhaqqı (AZN)";
-      document.getElementById("main-result-label").textContent =
-        "Xalis əməkhaqqı";
+        "Gross salary (AZN)";
+      document.getElementById("main-result-label").textContent = "Net salary";
     } else {
       document.getElementById("net-to-gross-btn").classList.add("active");
-      document.getElementById("salary-label").textContent =
-        "Xalis əməkhaqqı (AZN)";
-      document.getElementById("main-result-label").textContent =
-        "Brüt əməkhaqqı";
+      document.getElementById("salary-label").textContent = "Net salary (AZN)";
+      document.getElementById("main-result-label").textContent = "Gross salary";
     }
 
     // Clear results and recalculate if there's input
