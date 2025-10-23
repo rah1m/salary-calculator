@@ -110,7 +110,7 @@ class SalaryCalculatorApp {
             <div class="social-security">
               <div class="contribution">
                 <span class="contribution-name">DSMF</span>
-                <span class="contribution-rate">6 AZN + 10% (200 AZN-dan yuxarı)</span>
+                <span class="contribution-rate">3% (200 AZN-dək), 6 AZN + 10% (200 AZN-dan yuxarı)</span>
               </div>
               <div class="contribution">
                 <span class="contribution-name">İşsizlikdən sığorta</span>

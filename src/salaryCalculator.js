@@ -15,7 +15,12 @@ export class SalaryCalculator {
 
     // Social security contributions (current rates)
     this.socialSecurity = {
-      dsmf: { rate: 0.1, fixed: 6, threshold: 200 }, // DSMF (State Social Protection Fund)
+      dsmf: {
+        lowRate: 0.03, // 3% for salaries up to 200 AZN
+        highRate: 0.1, // 10% for amount above 200 AZN
+        fixed: 6, // Fixed amount for salaries above 200 AZN
+        threshold: 200,
+      }, // DSMF (State Social Protection Fund)
       unemployment: { rate: 0.005 }, // Unemployment insurance
       medical: { rate: 0.02 }, // Mandatory medical insurance
     };
@@ -60,13 +65,13 @@ export class SalaryCalculator {
    * @returns {number} DSMF contribution amount
    */
   calculateDSMF(grossSalary) {
-    if (grossSalary <= this.socialSecurity.dsmf.threshold) {
-      return 0;
+    if (grossSalary <= 200) {
+      // Əmək haqqı 200 manatadək olduqda: Hesablanan aylıq əmək haqqı * 3%
+      return grossSalary * 0.03;
+    } else {
+      // Əmək haqqı 200 manatdan çox olduqda: 6 + (Hesablanan aylıq əmək haqqı-200) * 10%
+      return 6 + (grossSalary - 200) * 0.1;
     }
-    return (
-      this.socialSecurity.dsmf.fixed +
-      grossSalary * this.socialSecurity.dsmf.rate
-    );
   }
 
   /**
