@@ -29,7 +29,7 @@ class SalaryCalculatorApp {
 
           <div class="input-section">
             <div class="input-group">
-              <label for="salary-input" id="salary-label">Brüt əməkhaqqı (AZN)</label>
+              <label for="salary-input" id="salary-label">Gross əməkhaqqı (AZN)</label>
               <input 
                 type="number" 
                 id="salary-input" 
@@ -53,7 +53,7 @@ class SalaryCalculatorApp {
               </div>
 
               <div class="result-card">
-                <div class="result-label">Brüt əməkhaqqı</div>
+                <div class="result-label">Gross əməkhaqqı</div>
                 <div class="result-value" id="gross-salary">0.00 AZN</div>
               </div>
 
